@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Portfolio Website</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">GOUTHAMAN.R</a>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="home-img">
+            <img src="me2.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Gouthaman</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>A passionate Python developer eager to kickstart my career in software development. With a solid foundation in Python programming and a drive to solve real-world problems, I’m excited to bring my skills and creativity to dynamic projects and collaborative teams.
+
+            </p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/gouthaman-ravi-a83b8b275/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Gouthaman-R"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="sample2.pdf" class="btn" download>Download CV</a>
+
+        </div>
+    </section>
+
+    <!-- skills section -->
+    <section id="skills">
+        <div class="sk"><h1>Skills:</h1></div><br><br>
+    
+    <div class="skills-grid">
+        <div class="skill-item">
+            <img src="pythonlogo.jpg" alt="Python" />
+            <p>Python</p>
+        </div>
+        <div class="skill-item">
+            <img src="django.png" alt="Django" />
+            <p>Django</p>
+        </div>
+        <div class="skill-item">
+            <img src="flask.png" alt="Flask" />
+            <p>Flask</p>
+        </div>
+        <div class="skill-item">
+            <img src="mysql.png" alt="MySQL" />
+            <p>MySQL</p>
+        </div>
+        <div class="skill-item">
+            <img src="html.png" alt="HTML" />
+            <p>HTML</p>
+        </div>
+        <div class="skill-item">
+            <img src="css.png" alt="CSS" />
+            <p>CSS</p>
+        </div>
+        <div class="skill-item">
+            <img src="javascript.png" alt="JavaScript" />
+            <p>JavaScript</p>
+        </div>
+        <div class="skill-item">
+            <img src="bootstrap.png" alt="Bootstrap" />
+            <p>Bootstrap</p>
+        </div>
+        <div class="skill-item">
+            <img src="git.png" alt="GitHub" />
+            <p>GitHub</p>
+        </div>
+    </div>
+</section>
+
+<!-- education section -->
+
+<section id="education">
+    <div class="edu"><h1>Education:</h1></div><br>
+    
+    <div class="education-container">
+        <img src="saclg.webp" alt="College Image" class="college-image">
+        <div class="education-info">
+            <h3>S.A.COLLEGE OF ARTS & SCIENCE.</h3>
+            <p>Degree: Bachelor of Science in Computer Science.</p>
+            <p>Batch: 2021 - 2024</p>
+            <p>I completed my college education with a focus on<br> Bsc.Computer Science, achieving a commendable 76% <br>overall. This journey not only deepened my knowledge <br>and skills but also fostered invaluable experiences and<br> connections that have shaped my career aspirations.</p>
+        </div>
+    </div>
+</section>
+
+<!-- experience section -->
+<section id="experience">
+    <div class="exp"><h1>Experience:</h1></div><br>
+    
+    <div class="experience-container">
+        <img src="uniq.jpg" alt="Company Logo" class="company-logo">
+        <div class="experience-info">
+            <h3>UNIQ TECHNOLOGIES.</h3>
+            <p>Duration: 06/2024 - 11/2024</p>
+            <p>
+                Internship Experience Overview: During my six-month internship, I had the opportunity to deepen my expertise in Python, HTML, CSS, and web frameworks like Flask and Django. I actively contributed to various projects, enhancing my understanding of back-end development and database management with MySQL.This experience not only solidified my technical abilities but also fueled my passion for creating dynamic and efficient web applications.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- contact section -->
+<section id="contact">
+    <div class="con"><h1>Contact:</h1>
+    </div>
+    <div class="contact-info">
+        <p>Email: <a href="mailto:gouthamanravi2004@gmail.com">gouthamanravi2004@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/7338916471">+91 7338916471</a></p>
+    </div>
+</section>
+
+
+    <script>
+        // Smooth scroll for anchor links
+        // document.querySelectorAll('nav a').forEach(anchor => {
+        //     anchor.addEventListener('click', function (e) {
+        //         e.preventDefault();
+        //         document.querySelector(this.getAttribute('href')).scrollIntoView({
+        //             behavior: 'smooth'
+        //         });
+        //     });
+        // });
+
+
+
+        document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        // Calculate the position to scroll to
+        const headerOffset = document.querySelector('header').offsetHeight;
+        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+
+    </script>
+</body>
+
+<footer>
+    <h1> “When the student is ready, the master appears.”</h1>
+</footer>
+
+
+</html>
